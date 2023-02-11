@@ -35,5 +35,3 @@ document.addEventListener("keydown", (e) => {
 
 ///////////////////
 
-const changeWorkHours = document.querySelector(".calendar");
-console.log(changeWorkHours);

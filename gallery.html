@@ -19,33 +19,37 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
+    <script src="js/script.js" defer></script>
+    <script src="js/downloadingPage.js" defer></script>
+    <script src="js/InterObsGallery.js" defer></script>
+
     <title>The White Fox</title>
   </head>
 
   <body>
-    <header class="header">
-      <div class="main-header" id="PageUp">
-        <div class="nav-bar">
-          <a class="nav-logo-link" href="/index.html">
-            <img class="logo" alt="White fox logo" src="img/Fox.png" />
-          </a>
-          <div class="main-text main-nav-link">
-            <a class="main-nav-text" href="/index.html">Бялата лисица</a>
-          </div>
+    <header id="pageup" class="header">
+      <div id="navbar" class="nav-bar">
+        <a class="nav-logo-link" href="/index.html">
+          <img class="logo" alt="White fox logo" src="img/Fox.png" />
+        </a>
+        <div class="main-text main-nav-link">
+          <a class="main-nav-text" href="/index.html">Бялата лисица</a>
+        </div>
+        <!-- <nav class="main-nav">
 
           <ul class="main-nav-list">
-            <!-- <li>
+            <li>
               <a class="main-nav-link gallery-link" href="/shop.html"
-                >Магазин</a
+              >Магазин</a
               >
-            </li> -->
+            </li>
           </ul>
+        </nav> -->
 
-          <!-- <button class="btn-mobile-nav">
-        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
-      </button> -->
-        </div>
+        <button class="btn-mobile-nav">
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button>
       </div>
     </header>
 
@@ -61,80 +65,191 @@
           <h2 class="heading-secondary">Декорации</h2>
         </div>
 
-        <!-- ROW 1 -->
         <div class="container-gallery gallery-rows">
+          <!-- MODAL -->
+          <div class="modal hidden">
+            <button class="close-modal">&times;</button>
+            <!-- <img
+              class="img-modal"
+              alt="#"
+              src="/img pakattu/1.jpg"
+              onContextMenu="return false;"
+            /> -->
+          </div>
+
+          <!-- ROW 1 -->
           <div class="gallery-row1">
+            <!-- IMG 1 -->
             <figure class="gallery-item">
               <img
+                data-tab="1"
                 class="salon-img open-modal"
                 alt="#"
                 src="/img/NailsBlue.HEIC"
               />
             </figure>
-            <div class="modal hidden">
-              <button class="close-modal">&times;</button>
-              <img class="salon-img-modal" alt="#" src="/img/NailsBlue.HEIC" />
-            </div>
+
+            <!-- IMG 2 -->
             <figure class="gallery-item">
-              <img class="salon-img" alt="#" src="/img/NailsPink.jpg" />
+              <img
+                data-tab="2"
+                class="salon-img"
+                alt="#"
+                src="/img/NailsPink.jpg"
+              />
             </figure>
-            <figure class="gallery-item">
-              <img class="salon-img" alt="#" src="/img/NailsPurple.jpg" />
+
+            <!-- IMG 3 -->
+            <figure class="gallery-item lazy-img">
+              <img
+                data-tab="3"
+                class="salon-img"
+                alt="#"
+                data-src="/img/NailsPurple.jpg"
+                src="img/Fox.png"
+              />
             </figure>
+
+            <!-- IMG 4 -->
             <figure class="gallery-item">
-              <img class="salon-img" alt="#" src="/img/NailsMango.jpg" />
+              <img
+                data-tab="4"
+                class="salon-img lazy-img"
+                alt="#"
+                data-src="/img/NailsGreen.jpg"
+                src="img/Fox.png"
+              />
             </figure>
+
+            <!-- IMG 5 -->
             <figure class="gallery-item">
-              <img class="salon-img" alt="#" src="/img/NailsGreen.jpg" />
+              <img
+                data-tab="5"
+                class="salon-img lazy-img"
+                alt="#"
+                data-src="/img/NailsGreen.jpg"
+                src="img/Fox.png"
+              />
             </figure>
+
+            <!-- IMG 6 -->
             <figure class="gallery-item">
-              <img class="salon-img" alt="#" src="/img/NailsPink2.jpg" />
+              <img
+                data-tab="6"
+                class="salon-img lazy-img"
+                alt="#"
+                data-src="/img/NailsPink2.jpg"
+                src="img/Fox.png"
+              />
             </figure>
           </div>
 
           <!-- ROW 2 -->
           <div class="gallery-row2">
+            <!-- IMG 1 -->
             <figure class="gallery-item">
               <img class="salon-img" alt="#" src="/img/NailsViolet.jpg" />
             </figure>
+
+            <!-- IMG 2 -->
             <figure class="gallery-item">
-              <img class="salon-img" alt="#" src="/img/NailsBlack.JPG" />
+              <img
+                class="salon-img lazy-img"
+                alt="#"
+                data-src="/img/NailsBlack.JPG"
+                src="img/Fox.png"
+              />
             </figure>
+
+            <!-- IMG 3 -->
             <figure class="gallery-item">
-              <img class="salon-img" alt="#" src="/img/NailsBlack2.JPG" />
+              <img
+                class="salon-img lazy-img"
+                alt="#"
+                data-src="/img/NailsBlack2.JPG"
+                src="img/Fox.png"
+              />
             </figure>
+
+            <!-- IMG 4 -->
             <figure class="gallery-item">
-              <img class="salon-img" alt="#" src="/img/SalonGoldenNails.jpg" />
+              <img
+                class="salon-img lazy-img"
+                alt="#"
+                data-src="/img/SalonGoldenNails.jpg"
+                src="img/Fox.png"
+              />
             </figure>
+
+            <!-- IMG 5 -->
             <figure class="gallery-item">
-              <img class="salon-img" alt="#" src="/img/NailsMango.jpg" />
+              <img
+                class="salon-img lazy-img"
+                alt="#"
+                data-src="/img/NailsMango.jpg"
+                src="img/Fox.png"
+              />
             </figure>
+
+            <!-- IMG 6 -->
             <figure class="gallery-item">
-              <img class="salon-img" alt="#" src="/img/NailsPink.jpg" />
+              <img
+                class="salon-img lazy-img"
+                alt="#"
+                data-src="/img/NailsPink.jpg"
+                src="img/Fox.png"
+              />
             </figure>
           </div>
 
           <!-- ROW 3 -->
           <div class="gallery-row3">
+            <!-- IMG 1 -->
             <figure class="gallery-item">
               <img class="salon-img" alt="#" src="/img/NailsViolet.jpg" />
             </figure>
+
+            <!-- IMG 2 -->
             <figure class="gallery-item">
-              <img class="salon-img" alt="#" src="/img/NailsBlue.HEIC" />
-            </figure>
-            <figure class="gallery-item">
-              <img class="salon-img" alt="#" src="/img/NailsPink3.JPG" />
+              <img
+                class="salon-img lazy-img"
+                alt="#"
+                data-src="/img/NailsBlue.HEIC"
+                src="img/Fox.png"
+              />
             </figure>
 
+            <!-- IMG 3 -->
             <figure class="gallery-item">
-              <img class="salon-img" alt="#" src="/img/NailsPinkArt.JPG" />
+              <img
+                class="salon-img lazy-img"
+                alt="#"
+                data-src="/img/NailsPink3.JPG"
+                src="img/Fox.png"
+              />
             </figure>
+
+            <!-- IMG 4 -->
             <figure class="gallery-item">
-              <img class="salon-img" alt="#" src="/img/NailsRedWhite.jpg" />
+              <img
+                class="salon-img lazy-img"
+                alt="#"
+                data-src="/img/NailsPinkArt.JPG"
+                src="img/Fox.png"
+              />
+            </figure>
+
+            <!-- IMG 5 -->
+            <figure class="gallery-item">
+              <img
+                class="salon-img lazy-img"
+                alt="#"
+                data-src="/img/NailsRedWhite.jpg"
+                src="img/Fox.png"
+              />
             </figure>
           </div>
         </div>
-        <div class="overlay hidden"></div>
       </section>
 
       <!-- <section class="section-inspiration">
@@ -155,7 +270,7 @@
     <footer class="footer" id="Contacts">
       <div class="container grid grid--2-cols">
         <div class="logo-col">
-          <a href="#PageUp" class="footer-logo">
+          <a href="#pageup" class="footer-logo">
             <img class="logo bigger" alt="White fox logo" src="img/Fox.png" />
           </a>
 
@@ -234,9 +349,7 @@
         </div>
       </div>
     </footer>
-    <script src="gallery.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/downloadingPage.js"></script>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -245,5 +358,9 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <div class="loader">
+      <img class="loader-logo logo" alt="White fox logo" src="img/Fox.png" />
+    </div>
   </body>
 </html>

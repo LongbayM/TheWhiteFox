@@ -1,5 +1,32 @@
 ("use strict");
 
+//////////////////////
+// Sticky navigation
+
+let prevScrollpos = window.scrollY;
+const nav = document.querySelector(".nav-bar");
+const logo = document.querySelector(".logo");
+const mainNavLink = document.querySelector(".main-nav-text");
+const mainNav = document.querySelector(".main-nav-list");
+const btnNav = document.querySelector(".btn-mobile-nav");
+const position = document.querySelector("body");
+
+position.addEventListener("scroll", () => {
+  const currentScrollPos = position.scrollTop;
+  if (prevScrollpos > currentScrollPos) {
+    nav.style.height = "12" + "rem";
+    logo.style.transform = "translateY(0)";
+    mainNavLink.style.transform = "translateY(0)";
+    btnNav.style.transform = "translateY(0)";
+  } else {
+    nav.style.height = "0" + "rem";
+    logo.style.transform = "translateY(-50%)";
+    mainNavLink.style.transform = "translateY(-60%)";
+    btnNav.style.transform = "translateY(-65%)";
+  }
+  prevScrollpos = currentScrollPos;
+});
+
 /////////////////////////
 // LAZY LOADING IMGS ////
 /////////////////////////
