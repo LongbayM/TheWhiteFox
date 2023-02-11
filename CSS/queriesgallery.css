@@ -1,0 +1,264 @@
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .heading-hero {
+    font-size: 8rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  .logo {
+    height: 14rem;
+  }
+
+  .bigger {
+    height: 18rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+  .nav-bar {
+    height: 10rem;
+  }
+
+  .heading-hero {
+    font-size: 6rem;
+  }
+
+  .contacts {
+    gap: 1.6rem;
+  }
+
+  .logo {
+    height: 12rem;
+  }
+
+  .bigger {
+    height: 16rem;
+  }
+
+  .footer-nav {
+    gap: 2.4rem;
+  }
+
+  .social-icon {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    font-size: 1.8rem;
+  }
+}
+
+/**************************/
+/* BELOW 570px (Phones) */
+/**************************/
+
+@media (max-width: 36em) {
+  .gallery-rows {
+    grid-template-columns: 1fr;
+    row-gap: 1.6rem;
+  }
+
+  .gallery-row1,
+  .gallery-row2,
+  .gallery-row3 {
+    padding: 0;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .nav-bar {
+    height: 10rem;
+  }
+
+  .nav-logo-link {
+    margin-right: 1.6rem;
+  }
+
+  .main-text {
+    margin-right: 2rem;
+  }
+
+  .logo {
+    height: 12rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-text {
+    font-size: 2rem;
+  }
+
+  .pricing-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--2-cols-pricing {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .list-headings {
+    grid-template-columns: 1fr;
+  }
+
+  .list-item {
+    align-items: center;
+  }
+
+  .list--vertical-line {
+    border-right: none;
+  }
+
+  .list-right {
+    align-items: center;
+  }
+
+  .footer {
+    padding: 6.4rem 0 2rem 0;
+  }
+
+  .contacts {
+    margin-bottom: 2.4rem;
+    gap: 1.6rem;
+  }
+
+  .bigger {
+    height: 14rem;
+  }
+
+  .address-col {
+    grid-row: 1;
+  }
+}
+
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/**************************/
+/* Fixing Safari flexbox gap */
+/**************************/

@@ -1,0 +1,333 @@
+/**************************/
+/* HEADER */
+/**************************/
+
+/**************************/
+/* NAVIGATION */
+/**************************/
+
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #fff;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* STICKY NAVIGATION */
+/* .sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 12rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+} */
+
+/**************************/
+/* HERO SECTION */
+/**************************/
+
+.section-hero {
+  padding: 0;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 20rem;
+  right: 7rem;
+}
+
+.hero-description {
+  font-size: 1.6rem;
+  margin-top: -2rem;
+}
+
+.hero-slideshow {
+  position: relative;
+  animation: zoom-in 60s ease infinite;
+}
+
+.heroBackground {
+  display: none;
+  margin: 0;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  height: 100vh;
+  width: 100%;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+
+  0% {
+    transform: scale(1, 1);
+  }
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+  margin-top: -2.2rem;
+  padding: 1.6rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/**************************/
+/* BEAUTY SALON SECTION */
+/**************************/
+
+.section-salon {
+  padding: 9.6rem 0 0 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 0;
+  column-gap: 0;
+  line-height: 0;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.salon-img {
+  overflow: hidden;
+  transition: all 0.8s ease;
+}
+
+figure img:hover {
+  transform: scale(1.1);
+}
+
+.fadeup {
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
+/**************************/
+/* TREATMENTS SECTION */
+/**************************/
+
+.section-treatments {
+  padding: 9.6rem 0;
+}
+
+.text-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.treatment-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.treatment-img-background {
+  background-color: rgb(0, 90, 0);
+  height: 110%;
+}
+
+.treatment-img {
+  display: block;
+  transform: translate(-3%, -3%);
+  margin: auto;
+  width: 80%;
+  overflow: hidden;
+  transition: all 0.8s ease;
+}
+
+.treatment-img-background img:hover {
+  transform: scale(1.1);
+}
+
+.icon {
+  margin-bottom: 1.6rem;
+}
+/**************************/
+/* TESTIMONIALS SECTION */
+/**************************/
+
+.section-testimonials {
+  background-color: #80b280;
+}
+
+.testimonials-container {
+  padding: 9.6rem;
+}
+
+.quotes {
+  fill: #001400;
+}
+
+@keyframes popup {
+  from {
+    color: #b3d1b3;
+  }
+  to {
+    color: #001400;
+  }
+}
+
+.testimonial-popup1,
+.testimonial-popup1 p {
+  animation-name: popup;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+.testimonial-popup2,
+.testimonial-popup2 p {
+  animation-name: popup;
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+}
+
+.testimonial-popup3,
+.testimonial-popup3 p {
+  animation-name: popup;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #001400;
+}
+
+/**************************/
+/* PRICING SECTION */
+/**************************/
+
+.section-pricing {
+  padding: 9.6rem 0 0 0;
+  text-align: center;
+}
+
+.grid-row-gap {
+  row-gap: 4rem;
+}
+
+.list {
+  align-items: center;
+}
+
+.list--vertical-line {
+  border-right: 3px solid #001400;
+}
+
+/**************************/
+/* CTA SECTION */
+/**************************/
+
+.section-cta {
+  padding: 12.8rem 0;
+  justify-content: center;
+}
+
+.cta-container {
+  text-align: center;
+}
+
+/**************************/
+/* DOWNLOADING PAGE */
+/**************************/
+
+#load {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  background: url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif")
+    no-repeat center center rgba(0, 0, 0, 0.25);
+}

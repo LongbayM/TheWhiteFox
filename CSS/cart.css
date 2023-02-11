@@ -1,0 +1,143 @@
+/**************************/
+/* SECTION CART */
+/**************************/
+
+/**************************/
+/* CART ITEMS */
+/**************************/
+
+/* 
+.section-cart {
+} */
+.cart {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 2.4rem;
+  margin: 20rem 5rem;
+}
+.cart-products {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgb(0, 40, 0);
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.35);
+}
+.cart-name {
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+
+  border-bottom: 1px solid rgb(0, 40, 0);
+  padding: 1.6rem;
+}
+.cart-overview {
+  align-items: center;
+}
+.cart-items {
+  display: flex;
+  border-bottom: 1px solid rgb(0, 40, 0);
+}
+.cart-img img {
+  height: 16rem;
+}
+.cart-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.4;
+}
+
+.brand-model {
+  text-decoration: none;
+  color: #333;
+}
+/* 
+.cart-detail-line {
+}
+.cart-detail-line-delete {
+} */
+
+/**************************/
+/* CART SUMMARY */
+/**************************/
+
+.cart-summary {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  border: 1px solid rgb(0, 40, 0);
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.35);
+}
+
+.summary-subtotal {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem 1.6rem 3.2rem 1.6rem;
+
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  border-bottom: 1px solid rgb(0, 40, 0);
+}
+/* .subtotal-articles {
+}
+.subtotal-price {
+} */
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid rgb(0, 40, 0);
+}
+
+.btn-center {
+  height: 9rem;
+  align-self: center;
+  padding-top: 2rem;
+}
+
+.btn-product-cart {
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 12rem;
+  padding: 12px 0px;
+  color: rgb(0, 40, 0);
+  background-color: #fff;
+  border-radius: 5px;
+
+  animation: zoom-in-zoom-out 5s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* .btn-product-card:link,
+.btn-product-card:visited {
+} */
+
+.btn-product-cart:hover,
+.btn-product-cart:active {
+  background-color: #005000;
+  color: goldenrod;
+  transition: all 0.4s;
+  cursor: pointer;
+}

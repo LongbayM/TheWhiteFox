@@ -1,0 +1,172 @@
+/**************************/
+/* HERO SECTION */
+/**************************/
+
+.hero-img {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)),
+    url("/img/OPMountain.HEIC");
+  width: 100%;
+  height: 100vh;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  animation: zoom-in-zoom-out 60s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.heading-hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  font-size: 10rem;
+}
+
+@keyframes popup {
+  from {
+    color: #fff;
+  }
+  to {
+    color: #333;
+  }
+}
+
+.hero-text-popup {
+  animation-name: popup;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+/**************************/
+/* GALLERY */
+/**************************/
+
+.section-gallery {
+  padding-top: 9.6rem;
+}
+
+.gallery-rows {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gallery-row1,
+.gallery-row2,
+.gallery-row3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.6rem;
+}
+
+.gallery-row1 {
+  padding-right: 4.8rem;
+}
+.gallery-row3 {
+  padding-left: 4.8rem;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/**************************/
+/* MODALS */
+/**************************/
+
+.hidden {
+  display: none;
+}
+
+.close-modal {
+  position: fixed;
+  top: -20.5rem;
+  right: 6rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  z-index: 10;
+}
+
+.salon-img-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+
+  z-index: 10;
+}
+
+.overlay {
+  position: fixed;
+  top: 0vw;
+  left: 0vw;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+/**************************/
+/* INSPIRATIONS */
+/**************************/
+
+.img-comp-container {
+  position: relative;
+  height: 600px;
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.img-comp-img img {
+  display: block;
+  line-height: 300px;
+  width: 60rem;
+  height: 60rem;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  width: 40px;
+  height: 40px;
+  background-color: greenyellow;
+  opacity: 0.7;
+  border-radius: 50%;
+}

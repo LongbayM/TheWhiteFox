@@ -1,0 +1,125 @@
+/**************************/
+/* NAVIGATION */
+/**************************/
+
+/**************************/
+/* SECTION PRODUCTCARD */
+/**************************/
+/* 
+.section-productcard {
+} */
+
+.productcard-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 15rem;
+  margin: 20rem 20rem;
+}
+
+.productcard-img {
+  width: 100%;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+
+.productcard-product-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.productcard-brand {
+  margin-bottom: 1.6rem;
+  line-height: 1.2;
+}
+
+.brand {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.brand-model {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.brand-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.productcard-origin {
+  list-style-type: none;
+  color: #888;
+  margin-bottom: 1.6rem;
+}
+
+.brand-price {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+/* 
+.productcard-additional {
+} */
+
+.quantity {
+  display: flex;
+  column-gap: 1.6rem;
+  padding-bottom: 2.4rem;
+  margin-bottom: 2.4rem;
+  border-bottom: 1px solid#888;
+}
+
+.input {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 5px;
+}
+
+.brand-instore-yes {
+  /* display: none; */
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #006400;
+  margin-bottom: 1.2rem;
+}
+.brand-instore-no {
+  display: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: red;
+  margin-bottom: 1.2rem;
+}
+.btn-product-card {
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 12rem;
+  padding: 12px 0px;
+  color: #333;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* .btn-product-card:link,
+.btn-product-card:visited {
+} */
+
+.btn-product-card:hover,
+.btn-product-card:active {
+  background-color: rgb(0, 40, 0, 0.9);
+  color: goldenrod;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.productcard-full-information {
+  text-align: left;
+  color: #222;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+
+.description {
+  margin-bottom: 1.6rem;
+}
