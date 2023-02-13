@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="CSS/general.css" />
     <link rel="stylesheet" href="CSS/stylegallery.css" />
     <link rel="stylesheet" href="CSS/queriesgallery.css" />
+    <link rel="stylesheet" href="CSS/modals.css" />
 
     <link
       rel="stylesheet"
@@ -22,6 +23,7 @@
     <script src="js/script.js" defer></script>
     <script src="js/downloadingPage.js" defer></script>
     <script src="js/InterObsGallery.js" defer></script>
+    <script src="js/modalImages.js" defer></script>
 
     <title>The White Fox</title>
   </head>
@@ -67,7 +69,7 @@
 
         <div class="container-gallery gallery-rows">
           <!-- MODAL -->
-          <div class="modal hidden">
+          <div class="modal-image hidden">
             <button class="close-modal">&times;</button>
             <!-- <img
               class="img-modal"
@@ -78,15 +80,10 @@
           </div>
 
           <!-- ROW 1 -->
-          <div class="gallery-row1">
+          <div class="operations__gallery-row gallery-row1">
             <!-- IMG 1 -->
-            <figure class="gallery-item">
-              <img
-                data-tab="1"
-                class="salon-img open-modal"
-                alt="#"
-                src="/img/NailsBlue.HEIC"
-              />
+            <figure class="gallery-img--container gallery-item">
+              <img class="salon-img" alt="#" src="/img/NailsBlue.HEIC" />
             </figure>
 
             <!-- IMG 2 -->
@@ -145,7 +142,7 @@
           </div>
 
           <!-- ROW 2 -->
-          <div class="gallery-row2">
+          <div class="operations__gallery-row gallery-row2">
             <!-- IMG 1 -->
             <figure class="gallery-item">
               <img class="salon-img" alt="#" src="/img/NailsViolet.jpg" />
@@ -203,7 +200,7 @@
           </div>
 
           <!-- ROW 3 -->
-          <div class="gallery-row3">
+          <div class="operations__gallery-row gallery-row3">
             <!-- IMG 1 -->
             <figure class="gallery-item">
               <img class="salon-img" alt="#" src="/img/NailsViolet.jpg" />

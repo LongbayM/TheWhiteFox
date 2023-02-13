@@ -1,37 +1,33 @@
 ("use strict");
 
 /////////////////////////
-//// MODAL ////
+//// MODAL CALENDAR ////
 /////////////////////////
 
-const modal = document.querySelector(".modal");
+const modal = document.querySelector(".modal-calendar");
 const btnOpenModal = document.querySelectorAll(".modal-btn");
 const btnCloseModal = document.querySelector(".close-modal");
 
-// Open modal row1
+// Open Calendar
 btnOpenModal.forEach((btn) =>
   btn.addEventListener("click", function () {
     modal.classList.remove("hidden");
   })
 );
 
-// Close Modal
+// Close btn
 btnCloseModal.addEventListener("click", function () {
   modal.classList.add("hidden");
 });
 
-// Close Modal click on overlay
+// Close click on overlay
 modal.addEventListener("click", function () {
-  const modalEl = document.getElementById("modal");
   modal.classList.add("hidden");
 });
 
-// Close Modal ESC key
+// Close ESC key
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     modal.classList.add("hidden");
   }
 });
-
-///////////////////
-
