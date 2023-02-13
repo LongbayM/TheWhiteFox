@@ -218,6 +218,10 @@ body {
   color: goldenrod;
 }
 
+.modal-btn {
+  position: relative;
+}
+
 .modal-btn,
 .modal-btn:link,
 .modal-btn:visited {
@@ -243,9 +247,29 @@ body {
   transition: all 0.3s;
 }
 
-.modal-btn:hover,
-.modal-btn:active {
+.modal-btn:hover {
   color: goldenrod;
+}
+
+.modal-btn:active {
+  transform: scale(0.85);
+}
+
+.modal-btn::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--y, 0) * 1px - 50px);
+  left: calc(var(--x, 0) * 1px - 50px);
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(white, #3984ff00 80%);
+
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.modal-btn:hover::after {
+  opacity: 0.4;
 }
 
 .link:link,

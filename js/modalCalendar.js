@@ -31,3 +31,15 @@ document.addEventListener("keydown", (e) => {
     modal.classList.add("hidden");
   }
 });
+
+/////////////////////////
+//// MODAL BTN CALENDAR ////
+/////////////////////////
+
+const modalBtn = document.querySelector(".modal-btn");
+
+modalBtn.addEventListener("mousemove", function (e) {
+  const { x, y } = modalBtn.getBoundingClientRect();
+  modalBtn.style.setProperty("--x", e.clientX - x);
+  modalBtn.style.setProperty("--y", e.clientY - y);
+});
