@@ -68,7 +68,16 @@ const observerUp = new IntersectionObserver((entries) => {
     const intersecting = entry.isIntersecting;
     entry.target.style.transform = intersecting
       ? "translateY(0)"
-      : "translateY(-20px)";
+      : "translateY(-30px)";
+  });
+});
+
+const observerBottom = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const intersecting = entry.isIntersecting;
+    entry.target.style.transform = intersecting
+      ? "translateY(0)"
+      : "translateY(30px)";
   });
 });
 
@@ -90,11 +99,35 @@ const observerLeft = new IntersectionObserver((entries) => {
   });
 });
 
+const observerFadeinIcon = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const intersecting = entry.isIntersecting;
+    entry.target.style.height = intersecting ? "5.2rem" : "0";
+  });
+});
+
+const observerFadeinTestamonial = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const intersecting = entry.isIntersecting;
+    entry.target.style.opacity = intersecting ? "1" : "0";
+  });
+});
+
 // Moving elements
 
 const treatmentImgEL = document.querySelectorAll(".treatment-img");
 treatmentImgEL.forEach((el) => {
-  observerUp.observe(el);
+  observerBottom.observe(el);
+});
+
+const treatmentIconEl = document.querySelectorAll(".icon");
+treatmentIconEl.forEach((el) => {
+  observerFadeinIcon.observe(el);
+});
+
+const testamonialEl = document.querySelectorAll(".testamonials-popup");
+testamonialEl.forEach((el) => {
+  observerFadeinTestamonial.observe(el);
 });
 
 const subheadingEL = document.querySelectorAll(".subheading");

@@ -218,58 +218,30 @@ body {
   color: goldenrod;
 }
 
-.modal-btn {
-  position: relative;
+.modal-btn span {
 }
 
 .modal-btn,
 .modal-btn:link,
 .modal-btn:visited {
   display: inline-block;
-
   text-decoration: none;
   font-size: 2rem;
-  line-height: 2;
   font-weight: 600;
   width: 32rem;
   height: 4rem;
-  text-align: center;
   border-radius: 9px;
   background-color: #fff;
   color: #333;
-
-  /* Only necessary for .modal-btn */
   cursor: pointer;
   font-family: inherit;
-
-  /* Put transition on original "state" */
-  /* transition: background-color 0.3s; */
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
-.modal-btn:hover {
+.modal-btn span:hover {
   color: goldenrod;
-}
-
-.modal-btn:active {
-  transform: scale(0.85);
-}
-
-.modal-btn::after {
-  content: "";
-  position: absolute;
-  top: calc(var(--y, 0) * 1px - 50px);
-  left: calc(var(--x, 0) * 1px - 50px);
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(white, #3984ff00 80%);
-
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.modal-btn:hover::after {
-  opacity: 0.4;
+  transition: all 0.1s ease-in-out;
+  text-shadow: 1px 1px 10px goldenrod;
 }
 
 .link:link,
@@ -328,8 +300,8 @@ body {
 
 .icon {
   width: 5.2rem;
-  height: 5.2rem;
   fill: green;
+  transition: all 2s;
 }
 
 *:focus {

@@ -2,7 +2,6 @@
 /* HEADER */
 /**************************/
 
-
 /**************************/
 /* HERO SECTION */
 /**************************/
@@ -134,7 +133,7 @@
 .gallery-item img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .salon-img {
@@ -179,11 +178,10 @@ figure img:hover {
 
 .treatment-img {
   display: block;
-  transform: translate(-3%, -3%);
   margin: auto;
   width: 80%;
   overflow: hidden;
-  transition: all 0.8s ease;
+  transition: all 1s;
 }
 
 .treatment-img-background img:hover {
@@ -220,23 +218,15 @@ figure img:hover {
 
 .testimonial-popup1,
 .testimonial-popup1 p {
-  animation-name: popup;
-  animation-duration: 2s;
-  animation-timing-function: ease-in;
+  transition: all 2s;
 }
-
 .testimonial-popup2,
 .testimonial-popup2 p {
-  animation-name: popup;
-  animation-duration: 4s;
-  animation-timing-function: ease-in;
+  transition: all 3s;
 }
-
 .testimonial-popup3,
 .testimonial-popup3 p {
-  animation-name: popup;
-  animation-duration: 3s;
-  animation-timing-function: ease-in;
+  transition: all 4s;
 }
 
 .testimonial-text {
