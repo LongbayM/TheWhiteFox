@@ -218,30 +218,106 @@ body {
   color: goldenrod;
 }
 
-.modal-btn span {
-}
-
 .modal-btn,
 .modal-btn:link,
 .modal-btn:visited {
+  font-size: 0;
+  width: 25rem;
+  height: 4rem;
+  border-radius: 9px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.modal-btn span {
+  font-family: inherit;
   display: inline-block;
   text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
-  width: 32rem;
-  height: 4rem;
-  border-radius: 9px;
-  background-color: #fff;
   color: #333;
   cursor: pointer;
-  font-family: inherit;
-  transition: all 0.5s;
 }
 
 .modal-btn span:hover {
   color: goldenrod;
-  transition: all 0.1s ease-in-out;
-  text-shadow: 1px 1px 10px goldenrod;
+  transition: all 0.2s ease;
+}
+
+.modal-btn span {
+  position: relative;
+}
+.modal-btn span:nth-child(1) {
+  --mov: 0;
+  --rot: 1;
+}
+.modal-btn span:nth-child(2) {
+  --mov: 1/3;
+  --rot: 3/4;
+}
+.modal-btn span:nth-child(3) {
+  --mov: 2/3;
+  --rot: 2/4;
+}
+.modal-btn span:nth-child(4) {
+  --mov: 3/3;
+  --rot: 1/4;
+}
+.modal-btn span:nth-child(5) {
+  --mov: 3/3;
+  --rot: -1/4;
+}
+.modal-btn span:nth-child(6) {
+  --mov: 2/3;
+  --rot: -2/4;
+}
+.modal-btn span:nth-child(7) {
+  --mov: 1/3;
+  --rot: -3/4;
+}
+.modal-btn span:nth-child(8) {
+  --mov: 0;
+  --rot: -1;
+}
+
+.modal-btn span:nth-child(10) {
+  --mov: 0;
+  --rot: -1;
+}
+.modal-btn span:nth-child(11) {
+  --mov: 0;
+  --rot: 1;
+}
+.modal-btn span:nth-child(13) {
+  --mov: 0;
+  --rot: 2;
+}
+.modal-btn span:nth-child(14) {
+  --mov: 1;
+  --rot: 0;
+}
+.modal-btn span:nth-child(15) {
+  --mov: 0;
+  --rot: -2;
+}
+
+.modal-btn:hover span {
+  animation: dance 0.65s linear forwards 0.18s infinite;
+}
+@keyframes dance {
+  30%,
+  36% {
+    transform: translateY(calc(-6px * var(--mov))) translateZ(0)
+      rotate(calc(-13deg * var(--rot)));
+  }
+  50% {
+    transform: translateY(calc(3px * var(--mov))) translateZ(0)
+      rotate(calc(6deg * var(--rot)));
+  }
+  70% {
+    transform: translateY(calc(-2px * var(--mov))) translateZ(0)
+      rotate(calc(-3deg * var(--rot)));
+  }
 }
 
 .link:link,
@@ -324,7 +400,6 @@ body {
   align-items: center;
   background: linear-gradient(-45deg, rgb(0, 20, 0), rgb(0, 40, 0));
   backdrop-filter: blur(3px);
-
   z-index: 11;
   transition: opacity 1s, visibility 1s;
 }
